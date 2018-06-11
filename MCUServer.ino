@@ -11,7 +11,7 @@ MDNSResponder mdns;
 
 // Replace with your network credentials
 const char* ssid = "openlab1";
-const char* password = "phonglab1";
+const char* password = "***";
 
 ESP8266WebServer server(80);
 
