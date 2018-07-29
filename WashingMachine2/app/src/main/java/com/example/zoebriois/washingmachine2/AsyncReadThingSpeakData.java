@@ -18,7 +18,7 @@ import java.net.URL;
 public class AsyncReadThingSpeakData extends AsyncTask<String, Void, String> {
 
     public Activity activity;
-    Integer resultFinalTS[] = {9, 9, 9, 9, 9};
+    double resultFinalTS[] = {9, 9, 9, 9, 9};
     String response;
 
     public AsyncReadThingSpeakData(Activity a) {

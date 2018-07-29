@@ -3,13 +3,9 @@ package com.example.zoebriois.washingmachine2;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -22,7 +18,7 @@ public class CycleRunning extends Activity {
         setContentView(R.layout.activity_cycle_running);
 
         final Globals globalsVariables = (Globals) getApplicationContext();
-        int RemainingTime = globalsVariables.getTime();
+        double RemainingTime = globalsVariables.getTime();
 
         RemainingTimeText = findViewById(R.id.textRemainingTime);
         RemainingTimeText.setText(String.valueOf(RemainingTime));
@@ -51,11 +47,12 @@ public class CycleRunning extends Activity {
     private Runnable Timer_Tick = new Runnable() {
         public void run() {
             final Globals globalsVariables = (Globals) getApplicationContext();
-            int RemainingTime = globalsVariables.getTime();
+            double RemainingTime = globalsVariables.getTime();
             if (RemainingTime > 0) {
                 RemainingTimeText.setText(String.valueOf(RemainingTime) + " min");
             } else {
-                RemainingTimeText.setText("fini");
+                Intent i = new Intent(CycleRunning.this, Finished.class);
+                startActivity(i);
             }
         }
     };

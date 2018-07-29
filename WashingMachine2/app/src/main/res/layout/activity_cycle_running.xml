@@ -25,13 +25,4 @@
             android:text="..."
             android:textSize="30sp" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/BMain"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/homeicon"
-        android:onClick="onBMainClick" />
 </RelativeLayout>

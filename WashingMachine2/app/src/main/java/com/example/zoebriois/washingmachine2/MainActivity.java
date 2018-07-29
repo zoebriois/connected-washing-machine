@@ -14,8 +14,8 @@ import java.util.TimerTask;
 public class MainActivity extends Activity {
     static MainActivity MainActivity;
     static TextView MachineStateText;
-    Integer MachineStateCurrent;
-
+    double MachineStateCurrent;
+    int CycleStateField = 3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,6 @@ public class MainActivity extends Activity {
         // Collecting data from ThingSpeak
         AsyncTask<String, Void, String> taskOnCreate = new AsyncReadThingSpeakData(this);
         taskOnCreate.execute();
-
 
         // Updating the textView
         Timer timer = new Timer();
@@ -65,7 +64,9 @@ public class MainActivity extends Activity {
     // Clicking on START MACHINE
     public void onBStartMachineClick(View v) {
         if (v.getId() == R.id.BStartMachine) {
-            Intent i = new Intent(MainActivity.this, ChooseCycle.class);
+            AsyncTask<String, Void, String> taskOnCLick1 = new AsyncWriteThingSpeakData(this);
+            taskOnCLick1.execute(String.valueOf(CycleStateField), "1");
+            Intent i = new Intent(MainActivity.this, ClosingTheTrap.class);
             startActivity(i);
             finish();
         }

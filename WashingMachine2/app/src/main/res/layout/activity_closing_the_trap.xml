@@ -4,24 +4,25 @@
     android:layout_height="fill_parent">
 
     <TextView
-        android:id="@+id/textChooseCycleBase"
+        android:id="@+id/textClosingTheTrap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please choose the washing cycle duration :"
+        android:textAlignment="center"
+        android:text="..."
         android:textSize="30sp" />
 
     <Button
         android:id="@+id/BCycle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textChooseCycleBase"
+        android:layout_below="@id/textClosingTheTrap"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
         android:background="@android:color/holo_blue_bright"
         android:onClick="onBCycle1Click"
         android:text="   2 minutes  "
         android:textColor="@android:color/white"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:visibility="invisible"/>
 
     <Button
         android:id="@+id/BCycle2"
@@ -34,7 +35,8 @@
         android:onClick="onBCycle2Click"
         android:text="   5 minutes  "
         android:textColor="@android:color/white"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:visibility="invisible"/>
 
     <Button
         android:id="@+id/BCycle3"
@@ -47,14 +49,7 @@
         android:onClick="onBCycle3Click"
         android:text="  10 minutes  "
         android:textColor="@android:color/white"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:visibility="invisible"/>
 
-    <Button
-        android:id="@+id/BMain"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/homeicon"
-        android:onClick="onBMainClick" />
 </RelativeLayout>

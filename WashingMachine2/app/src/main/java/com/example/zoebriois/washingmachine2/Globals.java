@@ -4,50 +4,50 @@ import android.app.Application;
 
 public class Globals extends Application {
     // Globals variables
-    private int MachineState = 0;
-    private int ButtonPushed = 0;
-    private int CycleState = 0;
-    private int TrapClosed = 0;
-    private int Time = 0;
+    private double MachineState = 0;
+    private double ButtonPushed = 0;
+    private double CycleState = 0;
+    private double TrapClosed = 0;
+    private double Time = 0.0;
 
 
-    public int getMachineState() {
+    public double getMachineState() {
         return MachineState;
     }
 
-    public void setMachineState(int machineState) {
+    public void setMachineState(double machineState) {
         MachineState = machineState;
     }
 
-    public int getButtonPushed() {
+    public double getButtonPushed() {
         return ButtonPushed;
     }
 
-    public void setButtonPushed(int buttonPushed) {
+    public void setButtonPushed(double buttonPushed) {
         ButtonPushed = buttonPushed;
     }
 
-    public int getCycleState() {
+    public double getCycleState() {
         return CycleState;
     }
 
-    public void setCycleState(int cycleState) {
+    public void setCycleState(double cycleState) {
         CycleState = cycleState;
     }
 
-    public int getTrapClosed() {
+    public double getTrapClosed() {
         return TrapClosed;
     }
 
-    public void setTrapClosed(int trapClosed) {
+    public void setTrapClosed(double trapClosed) {
         TrapClosed = trapClosed;
     }
 
-    public int getTime() {
+    public double getTime() {
         return Time;
     }
 
-    public void setTime(int time) {
+    public void setTime(double time) {
         Time = time;
     }
 }

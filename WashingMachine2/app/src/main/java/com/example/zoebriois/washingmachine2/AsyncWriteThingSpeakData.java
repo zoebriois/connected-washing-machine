@@ -88,6 +88,5 @@ public class AsyncWriteThingSpeakData extends AsyncTask<String, Void, String> {
     @Override
     protected void onPostExecute(String response) {
         super.onPostExecute(response);
-
     }
 }
